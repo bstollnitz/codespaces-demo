@@ -16,10 +16,8 @@
 		"azure-cli": "latest"
 	},
 	"remoteUser": "vscode",
-	"onCreateCommand": [
-		"echo 'az extension add -n ml -y' | bash",
-		// "az login",
-		// "az account set -s ca-bstollnitz-demo-test",
-		// "az configure --defaults group=rg-bstollnitz workspace=mlws-bstollnitz"
-	],
+	"onCreateCommand": "echo $AZURE_SUBSCRIPTION",
+	// "onCreateCommand": "az extension add -n ml -y && az login",
+	// "az account set -s ca-bstollnitz-demo-test",
+	// "az configure --defaults group=rg-bstollnitz workspace=mlws-bstollnitz"
 }
