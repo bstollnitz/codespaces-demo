@@ -8,11 +8,18 @@
 	},
 	"settings": {
 		"python.defaultInterpreterPath": "/opt/conda/bin/python",
-		"terminal.integrated.defaultProfile.linux": "zsh",
 	},
 	"extensions": [
 		"ms-python.python",
-		"ms-python.vscode-pylance",
 	],
+	"features": {
+		"azure-cli": "latest"
+	},
 	"remoteUser": "vscode",
+	"onCreateCommand": [
+		"az extension add -n ml -y",
+		// "az login",
+		// "az account set -s ca-bstollnitz-demo-test",
+		// "az configure --defaults group=rg-bstollnitz workspace=mlws-bstollnitz"
+	],
 }
